@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}{% for animal in all_animals%}
+<div class="animals">
+    <div class="animal name">
+        {{animal.name}}
+        <div class="breed">
+            {{animal.breed}}
+        </div>
+        {% endfor %} {% endblock %}
