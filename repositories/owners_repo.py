@@ -15,9 +15,8 @@ def select_all():
 
     sql = "SELECT * FROM owners"
     results = run_sql(sql)
-
     for row in results:
-        owner = Owners(row['name'], row['id'])
+        owner = Owners(row['name'], row['age'], row['id'])
         owners.append(owner)
     return owners
 
@@ -28,7 +27,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        user = Owners(result['name'], result['age'], )
+        owner = Owners(result['name'], result['age'], result['id'])
     return owner
 
 def delete_all():

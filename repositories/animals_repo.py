@@ -17,8 +17,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        owner = owners_repo.select(row['id'])
-        animal = Animals(row['name'], row['id'], owner)
+        owner = owners_repo.select(row['owner'])
+        animal = Animals(row['name'], row['breed'],owner, row['id'])
         animals.append(animal)
     return animals
 

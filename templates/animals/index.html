@@ -1,8 +1,14 @@
-{% extends "base.html" %} {% block content %}{% for animal in all_animals%}
+{% extends "base.html" %} {% block content %}{% for animal in all_animals %}
 <div class="animals">
     <div class="animal name">
         {{animal.name}}
         <div class="breed">
             {{animal.breed}}
+            <form class="delete-form" action="/animals/{{animal.id}}/delete" method="POST">
+                <!-- NEW -->
+                <button>Delete
+                    </button>
+
+            </form>
         </div>
         {% endfor %} {% endblock %}

@@ -19,5 +19,4 @@ animals_repo.save(animal_1)
 animal_2 = Animals('Peach', 'Cat', owner_2)
 animals_repo.save(animal_2)
 
-animals_repo.delete(animal_2.id)
 
